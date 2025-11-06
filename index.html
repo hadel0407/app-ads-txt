@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saturated Vapor Pressure Tool — Chemical & Pharmaceutical Tool</title>
+  <meta name="description" content="Fast and accurate Saturated Vapor Pressure Tool. Search by chemical name, CAS number or molecular formula. Export results and save time in experiments." />
+  <meta name="keywords" content="saturation vapor pressure, vapor pressure calculator, chemical calculator, CAS search, pharmaceutical tool" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Saturated Vapor Pressure Tool — Chemical & Pharmaceutical Tool" />
+  <meta property="og:description" content="Fast and accurate Saturated Vapor Pressure Tool. Search by name, CAS or molecular formula. Download on Google Play." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vapor.zhanghd.fun/" />
+  <meta property="og:image" content="/assets/og-image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- JSON-LD structured data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Saturated Vapor Pressure Tool",
+    "operatingSystem": "ANDROID, iOS",
+    "applicationCategory": "ScienceApplication",
+    "shortDescription": "Fast and precise vapor pressure calculator for chemical and pharmaceutical research.",
+    "description": "Calculate saturation vapor pressure at single temperatures or ranges. Search chemicals by name, CAS, or molecular formula. Export results for reporting.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "url": "https://vapor.zhanghd.fun/",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.zhanghd.vapor"
+  }
+  </script>
+
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#4f46e5;--muted:#94a3b8;--white:#ffffff}
+    html,body{height:100%;margin:0;font-family:Inter, Roboto, Arial, Helvetica, sans-serif;background:linear-gradient(180deg,#071121 0%,#081426 100%);color:var(--white);-webkit-font-smoothing:antialiased}
+    .container{max-width:960px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:700}
+    .brand h1{font-size:18px;margin:0}
+    .nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:14px}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center}
+    .hero h2{margin:0;font-size:28px;line-height:1.05}
+    .hero p{color:var(--muted);margin-top:12px;font-size:15px}
+    .cta{margin-top:18px;display:flex;gap:12px;align-items:center}
+    .btn{background:var(--accent);padding:12px 18px;border-radius:10px;color:var(--white);text-decoration:none;font-weight:600;box-shadow:0 6px 20px rgba(79,70,229,0.18)}
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.08);color:var(--white)}
+
+    .mock{background:linear-gradient(180deg,#071826,#0b1a2b);border-radius:14px;padding:14px;text-align:center}
+    .screenshot{width:100%;height:640px;border-radius:8px;background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="360" height="640"><rect width="100%" height="100%" fill="%230b1220"/></svg>') center/cover no-repeat}
+
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+    .feature{background:rgba(255,255,255,0.03);padding:16px;border-radius:10px}
+    .feature h3{margin:0 0 8px 0;font-size:16px}
+    .feature p{margin:0;color:var(--muted);font-size:13px}
+
+    .tutorial{margin-top:28px;background:rgba(255,255,255,0.02);padding:18px;border-radius:10px}
+    .steps{display:flex;gap:12px;flex-direction:column}
+    .step{display:flex;gap:14px}
+    .step .num{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:center}
+    .step .text{color:var(--muted)}
+
+    footer{margin-top:36px;color:var(--muted);font-size:13px;padding:14px 0;border-top:1px solid rgba(255,255,255,0.02)}
+
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      .mock{order: -1}
+      .features{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:520px){
+      .features{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">SV</div>
+        <div>
+          <h1>Saturated Vapor Pressure Tool</h1>
+          <div style="color:var(--muted);font-size:12px">Fast & accurate tool for chemical & pharmaceutical research</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="#tutorial">Tutorial</a>
+        <a href="#download">Download</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h2>Fast & precise saturation vapor pressure calculations for researchers</h2>
+          <p>Calculate vapor pressure at a single temperature or across a range. Search chemicals by name, CAS, or molecular formula. Export results for reports and lab records.</p>
+
+          <div class="cta">
+            <a id="playLink" class="btn" href="https://play.google.com/store/apps/details?id=com.zhanghd.vapor" target="_blank" rel="noopener">Download on Google Play</a>
+            <a id="storeLink" class="btn secondary" href="#" target="_blank" rel="noopener">App Store (iOS)</a>
+          </div>
+
+          <div style="margin-top:14px;color:var(--muted);font-size:13px">Available for Android. iOS version coming soon.</div>
+        </div>
+
+        <aside class="mock">
+          <div class="screenshot" aria-hidden="true"></div>
+          <div style="margin-top:12px;color:var(--muted);font-size:13px">Quick preview: input temperature, choose substance, get precise vapor pressure.</div>
+        </aside>
+      </section>
+
+      <section id="features" class="features">
+        <div class="feature">
+          <h3>Single point calculation</h3>
+          <p>Get vapor pressure for any temperature instantly using proven equations.</p>
+        </div>
+        <div class="feature">
+          <h3>Range calculations</h3>
+          <p>Compute across temperature intervals and export CSV summaries.</p>
+        </div>
+        <div class="feature">
+          <h3>Chemical search</h3>
+          <p>Search by chemical name, CAS number or molecular formula with fast lookup.</p>
+        </div>
+        <div class="feature">
+          <h3>Export & report</h3>
+          <p>Save results to CSV or Excel for documentation and lab reports.</p>
+        </div>
+        <div class="feature">
+          <h3>Unit conversion</h3>
+          <p>Support multiple units (Pa, kPa, mmHg, Torr) and temperature scales.</p>
+        </div>
+        <div class="feature">
+          <h3>Offline mode</h3>
+          <p>Local database for offline calculations when network is unavailable.</p>
+        </div>
+      </section>
+
+      <section id="tutorial" class="tutorial">
+        <h3 style="margin-top:0">Quick start</h3>
+        <div class="steps">
+          <div class="step">
+            <div class="num">1</div>
+            <div class="text">Open the app and search the chemical by name or CAS. If not found, add a custom compound.</div>
+          </div>
+          <div class="step">
+            <div class="num">2</div>
+            <div class="text">Enter the temperature (single point or define a range) and choose units.</div>
+          </div>
+          <div class="step">
+            <div class="num">3</div>
+            <div class="text">Tap Calculate — view results and export to CSV for lab reports.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="download" style="margin-top:22px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:12px">
+        <h3 style="margin:0 0 8px 0">Download & Install</h3>
+        <p style="color:var(--muted);margin:0 0 12px 0">Click the button to open the Google Play store. If the Play Store is unavailable in your region, download the APK from our website (link below).</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn" href="https://play.google.com/store/apps/details?id=com.zhanghd.vapor" target="_blank" rel="noopener">Google Play</a>
+          <a class="btn secondary" href="https://
