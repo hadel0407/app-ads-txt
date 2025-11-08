@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Saturated Vapor Pressure Tool — Chemical & Pharmaceutical Tool</title>
-  <meta name="description" content="Fast and accurate Saturated Vapor Pressure Tool. Calculate saturation vapor pressure by chemical name, CAS number, or molecular formula. Android app download.">
-  <meta name="keywords" content="vapor pressure, saturation vapor pressure, chemical calculator, CAS search, pharmaceutical tool, Android app">
+  <title>Saturated Vapor Pressure Calculator — Supports hundreds of chemicals, no registration, instant use</title>
+  <meta name="description" content="This app supports saturation vapor pressure calculation for hundreds of chemicals, including methanol, ethanol, benzene, acetone, and more. No registration required, download and use instantly. Calculate by chemical name, CAS number, or molecular formula. Android app available.">
+  <meta name="keywords" content="Methane, Biogas, Fire damp, Marsh gas, Hydrogen iodide, Carbon monoxide, Hydrogen bromide, Ethene, Ethylene, Acetone, Hydrochloric acid, Propane, Methyl chloride, Isoprene, 1,2-Butadiene, 2-Methylpropane, Ethyl chloride, Methyl bromide, 1-Butene, Carbon tetrachloride, Isobutene, Cyclopentene, Thiophene, Iodomethane, Ethylene oxide, Dichloromethane, Dimethyl ether, Furan, Trimethylamine, 1,2-Dibromoethane, Cyclohexane, Benzene, Acetylacetone, Tetrachloroethylene, Trichloroethylene, 1,1,1-Trichloroethane, Chloroform, Tetrahydrofuran, Phenylacetylene, Isopentane, Methylcyclopentane, Ethane, 1,1-dichloro-, 1-Butene, 2-methyl-, 2,2-Dimethylbutane, Oxirane, 2-ethyl-, 1-Pentene, Hexachloroethane, Pyridine, Piperidine, 2-Bromopropane, Ethane, 1,1,1,2,2-pentachloro-, Methacrolein, Iodobenzene, Toluene, Acetone, Dimethylamine, Formaldehyde, Ethyl formate, Acetaldehyde, Benzaldehyde, Triethylamine">
 
   <!-- Open Graph / Social -->
-  <meta property="og:title" content="Saturated Vapor Pressure Tool — Chemical & Pharmaceutical Tool" />
-  <meta property="og:description" content="Fast and accurate Saturated Vapor Pressure Tool. Search by name, CAS or molecular formula. Download on Google Play." />
+  <meta property="og:title" content="Saturated Vapor Pressure Calculator — Chemical & Pharmaceutical Calculator" />
+  <meta property="og:description" content="Fast and accurate Saturated Vapor Pressure Calculator. Search by name, CAS or molecular formula. Download on Google Play." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://vapor.zhanghd.fun/" />
   <meta property="og:image" content="/assets/quick-preview.png.webp" />
@@ -22,7 +22,7 @@
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "Saturated Vapor Pressure Tool",
+    "name": "Saturated Vapor Pressure Calculator",
     "operatingSystem": "ANDROID",
     "applicationCategory": "ScienceApplication",
     "shortDescription": "Fast and precise vapor pressure calculator for chemical and pharmaceutical research.",
@@ -39,222 +39,220 @@
 
   <style>
    :root {
-  --bg: #0f1724;
-  --card: #0b1220;
-  --accent: #4f46e5;
-  --muted: #94a3b8;
-  --white: #ffffff;
-}
+      --bg: #0f1724;
+      --card: #0b1220;
+      --accent: #4f46e5;
+      --muted: #94a3b8;
+      --white: #ffffff;
+    }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  font-family: Inter, Roboto, Arial, Helvetica, sans-serif;
-  background: linear-gradient(180deg, #071121 0%, #081426 100%);
-  color: var(--white);
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-}
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Inter, Roboto, Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #071121 0%, #081426 100%);
+      color: var(--white);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 24px;
-}
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px;
+    }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 28px;
-  flex-wrap: wrap;
-}
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
-.logo {
-  width: 48px;
-  height: 48px;
-  border-radius: 8px;
-  background: linear-gradient(135deg, var(--accent), #06b6d4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-}
+    .logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent), #06b6d4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
 
-.brand h1 {
-  font-size: 18px;
-  margin: 0;
-}
+    .brand h1 {
+      font-size: 18px;
+      margin: 0;
+    }
 
-.nav a {
-  color: var(--muted);
-  text-decoration: none;
-  margin-left: 18px;
-  font-size: 14px;
-}
+    .nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
 
-.hero {
-  display: grid;
-  grid-template-columns: 1fr 360px;
-  gap: 28px;
-  align-items: center;
-}
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 28px;
+      align-items: center;
+    }
 
-.hero h2 {
-  margin: 0;
-  font-size: 28px;
-  line-height: 1.05;
-}
+    .hero h2 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.05;
+    }
 
-.hero p {
-  color: var(--muted);
-  margin-top: 12px;
-  font-size: 15px;
-}
+    .hero p {
+      color: var(--muted);
+      margin-top: 12px;
+      font-size: 15px;
+    }
 
-.cta {
-  margin-top: 18px;
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  flex-wrap: wrap;
-}
+    .cta {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-.btn {
-  background: var(--accent);
-  padding: 12px 18px;
-  border-radius: 10px;
-  color: var(--white);
-  text-decoration: none;
-  font-weight: 600;
-  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.18);
-  transition: all 0.2s ease;
-}
+    .btn {
+      background: var(--accent);
+      padding: 12px 18px;
+      border-radius: 10px;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 6px 20px rgba(79, 70, 229, 0.18);
+      transition: all 0.2s ease;
+    }
 
-.btn:hover {
-  background: #4338ca;
-}
+    .btn:hover {
+      background: #4338ca;
+    }
 
-.mock {
-  background: linear-gradient(180deg, #071826, #0b1a2b);
-  border-radius: 14px;
-  padding: 10px;
-  text-align: center;
-  overflow: hidden;
-}
+    .mock {
+      background: linear-gradient(180deg, #071826, #0b1a2b);
+      border-radius: 14px;
+      padding: 10px;
+      text-align: center;
+      overflow: hidden;
+    }
 
-.screenshot {
-  width: 100%;
-  max-width: 100%;
-  aspect-ratio: 9 / 19;
-  border-radius: 8px;
-  background: url('/assets/quick-preview.png.webp') center center / contain no-repeat;
-}
+    .screenshot {
+      width: 100%;
+      max-width: 100%;
+      aspect-ratio: 9 / 19;
+      border-radius: 8px;
+      background: url('/assets/quick-preview.png.webp') center center / contain no-repeat;
+    }
 
-.features {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  margin-top: 28px;
-}
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 28px;
+    }
 
-.feature {
-  background: rgba(255, 255, 255, 0.03);
-  padding: 16px;
-  border-radius: 10px;
-}
+    .feature {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 16px;
+      border-radius: 10px;
+    }
 
-.feature h3 {
-  margin: 0 0 8px 0;
-  font-size: 16px;
-}
+    .feature h3 {
+      margin: 0 0 8px 0;
+      font-size: 16px;
+    }
 
-.feature p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 13px;
-}
+    .feature p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
 
-.tutorial {
-  margin-top: 28px;
-  background: rgba(255, 255, 255, 0.02);
-  padding: 18px;
-  border-radius: 10px;
-}
+    .tutorial {
+      margin-top: 28px;
+      background: rgba(255, 255, 255, 0.02);
+      padding: 18px;
+      border-radius: 10px;
+    }
 
-.steps {
-  display: flex;
-  gap: 12px;
-  flex-direction: column;
-}
+    .steps {
+      display: flex;
+      gap: 12px;
+      flex-direction: column;
+    }
 
-.step {
-  display: flex;
-  gap: 14px;
-}
+    .step {
+      display: flex;
+      gap: 14px;
+    }
 
-.step .num {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.04);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    .step .num {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.04);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.step .text {
-  color: var(--muted);
-}
+    .step .text {
+      color: var(--muted);
+    }
 
-footer {
-  margin-top: 36px;
-  color: var(--muted);
-  font-size: 13px;
-  padding: 14px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.02);
-}
+    footer {
+      margin-top: 36px;
+      color: var(--muted);
+      font-size: 13px;
+      padding: 14px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.02);
+    }
 
-/* ✅ 响应式优化 */
-@media (max-width: 880px) {
-  .container {
-    padding: 18px;
-  }
-  .hero {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .mock {
-    order: -1;
-    max-width: 400px;
-    margin: 0 auto 20px;
-  }
-  .hero h2 {
-    font-size: 22px;
-  }
-  .features {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+    @media (max-width: 880px) {
+      .container {
+        padding: 18px;
+      }
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .mock {
+        order: -1;
+        max-width: 400px;
+        margin: 0 auto 20px;
+      }
+      .hero h2 {
+        font-size: 22px;
+      }
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
 
-@media (max-width: 520px) {
-  .features {
-    grid-template-columns: 1fr;
-  }
-  .hero h2 {
-    font-size: 20px;
-  }
-  .screenshot {
-    aspect-ratio: 9 / 16;
-  }
-}
-
+    @media (max-width: 520px) {
+      .features {
+        grid-template-columns: 1fr;
+      }
+      .hero h2 {
+        font-size: 20px;
+      }
+      .screenshot {
+        aspect-ratio: 9 / 16;
+      }
+    }
   </style>
 </head>
 <body>
@@ -263,15 +261,10 @@ footer {
       <div class="brand">
         <div class="logo">SV</div>
         <div>
-          <h1>Saturated Vapor Pressure Tool</h1>
-          <div style="color:var(--muted);font-size:12px">Fast & accurate tool for chemical & pharmaceutical research</div>
+          <h1>Saturated Vapor Pressure Calculator</h1>
+          <div style="color:var(--muted);font-size:12px">Fast & accurate Calculator for chemical & pharmaceutical research</div>
         </div>
       </div>
-      <nav class="nav">
-        <a href="#features">Features</a>
-        <a href="#tutorial">Tutorial</a>
-        <a href="#download">Download</a>
-      </nav>
     </header>
 
     <main>
@@ -279,6 +272,7 @@ footer {
         <div>
           <h2>Fast & precise saturation vapor pressure calculations for researchers</h2>
           <p>Calculate vapor pressure at a single temperature or across a range. Search chemicals by name, CAS, or molecular formula.</p>
+          <p><strong>Supports hundreds of chemicals including methanol, ethanol, benzene, acetone, and more. No registration required, download and use instantly.</strong></p>
 
           <div class="cta">
             <a id="playLink" class="btn" href="https://play.google.com/store/apps/details?id=com.zhanghd.vapor" target="_blank" rel="noopener">Download on Google Play</a>
@@ -336,11 +330,89 @@ footer {
 
       <section id="download" style="margin-top:22px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:12px">
         <h3 style="margin:0 0 8px 0">Download & Install</h3>
-        <p style="color:var(--muted);margin:0">Click the button to open the Google Play store.</p>
+        <p style="color:var(--muted);margin:0">Click the button to open the Google Play store and download the app instantly.</p>
         <div style="display:flex;gap:12px;flex-wrap:wrap">
           <a class="btn" href="https://play.google.com/store/apps/details?id=com.zhanghd.vapor" target="_blank" rel="noopener">Google Play</a>
         </div>
       </section>
+
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "mainEntityOfPage": "https://vapor.zhanghd.fun/",
+        "name": "Chemical Substances List",
+        "description": "A curated list of common chemical substances for saturation vapor pressure calculation, including Methane, Ethanol, Benzene, Acetone, Propane, Hydrogen chloride, and more.",
+        "about": [
+          "Methane",
+          "Biogas",
+          "Fire damp",
+          "Marsh gas",
+          "Hydrogen iodide",
+          "Carbon monoxide",
+          "Hydrogen bromide",
+          "Ethene",
+          "Ethylene",
+          "Acetone",
+          "Hydrochloric acid",
+          "Propane",
+          "Methyl chloride",
+          "Isoprene",
+          "1,2-Butadiene",
+          "2-Methylpropane",
+          "Ethyl chloride",
+          "Methyl bromide",
+          "1-Butene",
+          "Carbon tetrachloride",
+          "Isobutene",
+          "Cyclopentene",
+          "Thiophene",
+          "Iodomethane",
+          "Ethylene oxide",
+          "Dichloromethane",
+          "Dimethyl ether",
+          "Furan",
+          "Trimethylamine",
+          "1,2-Dibromoethane",
+          "Cyclohexane",
+          "Benzene",
+          "Acetylacetone",
+          "Tetrachloroethylene",
+          "Trichloroethylene",
+          "1,1,1-Trichloroethane",
+          "Chloroform",
+          "Tetrahydrofuran",
+          "Phenylacetylene",
+          "Isopentane",
+          "Methylcyclopentane",
+          "Ethane, 1,1-dichloro-",
+          "1-Butene, 2-methyl-",
+          "2,2-Dimethylbutane",
+          "Oxirane, 2-ethyl-",
+          "1-Pentene",
+          "Hexachloroethane",
+          "Pyridine",
+          "Piperidine",
+          "2-Bromopropane",
+          "Ethane, 1,1,1,2,2-pentachloro-",
+          "Methacrolein",
+          "Iodobenzene",
+          "Toluene",
+          "Dimethylamine",
+          "Formaldehyde",
+          "Ethyl formate",
+          "Acetaldehyde",
+          "Benzaldehyde",
+          "Triethylamine"
+        ],
+        "url": "https://vapor.zhanghd.fun/",
+        "distribution": {
+          "@type": "DataDownload",
+          "encodingFormat": "JSON",
+          "contentUrl": "https://vapor.zhanghd.fun/assets/chemicals.json"
+        }
+      }
+      </script>
 
       <footer>
         © 2025 hadel0407. All rights reserved.
