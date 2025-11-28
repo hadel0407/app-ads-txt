@@ -34,7 +34,6 @@
   <p>The app collects minimal personal data necessary to provide core functionality and enhance user experience:</p>
   <ul>
     <li><strong>Google Account Email & UID:</strong> Collected via Google Sign-In (Firebase Authentication) for user identification, subscription verification, and cross-device synchronization. Data is stored securely in Firebase Firestore and transmitted using HTTPS.</li>
-    <li><strong>Device Information:</strong> Collected using <code>device_info_plus</code> for performance optimization, analytics, and troubleshooting.</li>
     <li><strong>In-App Purchases:</strong> Payment information is handled by Google Play Billing. Vapor App does not store credit card or payment details locally.</li>
     <li><strong>Advertisements:</strong> Google AdMob may collect device information, network information, and ad interaction data for personalized ad delivery and performance analytics. Users may reset their Advertising ID or opt out of personalized ads in device settings.</li>
     <li><strong>Local Storage:</strong> The app may store user preferences or settings locally using <code>shared_preferences</code>. No personally identifiable information is stored locally.</li>
@@ -108,3 +107,4 @@
 
 </body>
 </html>
+
